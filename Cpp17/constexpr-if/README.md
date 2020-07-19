@@ -11,6 +11,6 @@ The official description of the if constexpre on the [cppreference](https://en.c
 <em>What is the constexpr-if??</em> It allows the programmer to choose at compile time one or more different branches to take in the code.
 
 Important: The Compiler must be able to evaluate the entire condition of the if
-constexpre, else it throws compile time error.
+constexpr, else it throws a compile time error.
 
 Nested if constexpr can be used for avoiding the above phenomenon, however that's not a compiler friendly approach.
