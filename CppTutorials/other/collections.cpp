@@ -2,12 +2,14 @@
 #include <vector>
 
 
-void doNothing(const std::vector<int> &data){}
+namespace utilz{
+    void doNothing(const std::vector<int> &data){}
 
-void thePrint(const std::vector<int> &data){
-    for (auto el : data){
-        std::cout << el << std::endl;
-        doNothing(data);
+    void thePrint(const std::vector<int> &data){
+        for (auto el : data){
+            std::cout << el << std::endl;
+            doNothing(data);
+        }
     }
 }
 
@@ -22,7 +24,7 @@ int main(){
 
     for (auto el : grades){
         std::cout << "------" << std::endl;
-        thePrint(el);
+        utilz::thePrint(el);
         std::cout << "------" << std::endl;
         for (auto el2 : el){
             std::cout << el2 << " ";
