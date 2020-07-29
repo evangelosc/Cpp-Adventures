@@ -3,8 +3,6 @@
 #include <vector>
 #include <string>
 
-
-
 int main(){
     // write to file
     std::ofstream file;
