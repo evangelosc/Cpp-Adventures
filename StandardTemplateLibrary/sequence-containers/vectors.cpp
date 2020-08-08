@@ -7,6 +7,25 @@
 
 
 int main(){
+
+    std::vector<int> newV {11,22,33,44,55};
+
+    // std::remove_if is from the algorithms header, it populates the vector
+    // with the "good elements" and returns an iterator at the position where the
+    // first "bad element" is located at
+    // std::vector.erase() will erase everything from the location of the 
+    // iterator and afterwards
+    for(std::vector<int>::iterator i = newV.begin(); i != newV.end(); ++i){
+        std::cout << *i << std::endl;
+    }
+    std::cout << std::endl;
+
+    newV.erase(std::remove_if(newV.begin(), newV.end(),
+                            [](int e){ return e%2 == 1; }), newV.end() );
+
+    for (auto el : newV){ std::cout << el << std::endl; }
+    std::cout << std::endl;
+
     std::vector<std::string> v;
 
     v.push_back("cat");
